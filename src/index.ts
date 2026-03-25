@@ -3,6 +3,7 @@ import * as exec from "@actions/exec";
 import {
   installNitro,
   getSourceMetadata,
+  getCommentMode,
 } from "@chillicream/nitro-github-actions";
 import pkg from "../package.json" with { type: "json" };
 
@@ -17,6 +18,7 @@ async function executeCommand(): Promise<void> {
     const jobId = core.getInput("job-id") || undefined;
     const sourceMetadata = JSON.stringify(getSourceMetadata(jobId));
     const cloudUrl = core.getInput("cloud-url") || null;
+    getCommentMode();
 
     const args: string[] = [
       "schema",

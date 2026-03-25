@@ -26,6 +26,10 @@ inputs:
     description: "The ID of the current job"
     required: false
     default: ${{ job.check_run_id }}
+  commentMode:
+    description: "Controls pull request feedback on validation failure: comment, review, or none"
+    required: false
+    default: "none"
 
 runs:
   using: "node20"
