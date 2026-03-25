@@ -3,7 +3,7 @@ description: "Validates GraphQL schemas against the Nitro registry"
 author: "ChilliCream"
 branding:
   icon: "check-circle"
-  color: "purple"
+  color: "blue"
 
 inputs:
   stage:
@@ -26,7 +26,7 @@ inputs:
     description: "The ID of the current job"
     required: false
     default: ${{ job.check_run_id }}
-  commentMode:
+  comment-mode:
     description: "Controls pull request feedback on validation failure: comment, review, or none"
     required: false
     default: "none"
